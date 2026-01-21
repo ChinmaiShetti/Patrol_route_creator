@@ -1,0 +1,27 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Tooling / IDE
+.vscode/
+.idea/
+
+# Outputs and caches
+outputs/
+cache/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
