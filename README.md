@@ -8,10 +8,10 @@ Web + CLI tool to cluster road networks into patrol zones and render PNG/JSON ou
 - Recommended VS Code extensions: ms-python.python, ms-python.vscode-pylance, ms-toolsai.jupyter.
 
 ## Setup
-1) Clone and enter the repo
+1) Clone and enter the repo (replace <folder> if you chose a different name)
 ```
 git clone https://github.com/vindhyakaranth1/Route_Analysing.git
-cd Route_Analysing/..
+cd Route_Analysing
 ```
 2) Create and activate venv (Windows)
 ```
@@ -25,8 +25,9 @@ pip install -r requirements.txt
 
 ## Run the web UI (Leaflet + Flask)
 Option A: double-click on Windows
-- Double-click `run_app.bat` in File Explorer. It will create/activate `.venv`, install deps, and start the server.
-- When you see "Starting web server on http://localhost:5000 ...", open that URL in your browser.
+- Double-click `run_app.bat` in File Explorer.
+- Or run from shell in repo root: `.\run_app.bat`
+- It creates/activates `.venv`, installs deps, and starts the server. When you see "Starting web server on http://localhost:5000 ...", open that URL in your browser.
 
 Option B: manual shell
 ```
@@ -48,6 +49,7 @@ python Route_Analysing/real_routes.py --place "Pattangere, Bengaluru, Karnataka,
 - Geocoding fallback: if a polygon is not found, the code buffers the geocoded point (default 2000m). Adjust with --radius.
 - Display simplification: routes shown in Leaflet are decimated for clarity; saved JSON/PNGs use full resolution.
 - If Nominatim fails, try a broader/more specific place name or increase radius.
+- UI: refreshed with larger typography (Manrope + Space Grotesk), brighter gradients, and full-height map/preview containers.
 - Favicon 404 in the dev server is expected and harmless.
 
 ## Troubleshooting
